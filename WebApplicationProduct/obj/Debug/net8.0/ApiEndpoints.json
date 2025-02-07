@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "WebApplicationProduct.Features.Application.ComapnyController",
+    "Method": "Create",
+    "RelativePath": "api/Comapny/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

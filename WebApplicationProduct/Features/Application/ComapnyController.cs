@@ -5,7 +5,7 @@ using WebApplicationProduct.Features.ServiceImplementation.ServiceInterface.Mess
 
 namespace WebApplicationProduct.Features.Application
 {
-    [Route("api/[controller]/[action]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class ComapnyController : ControllerBase
     {
@@ -16,14 +16,21 @@ namespace WebApplicationProduct.Features.Application
         }
 
         [HttpPost]
-        public IActionResult Create([FromQuery] CompanyRequest formRequest)
+        public async Task<IActionResult> Create([FromQuery] CompanyRequest formRequest)
         {
             CompanyRequest request = new()
             {
                 Name = formRequest.Name
             };
-            _companyService.Add(request);
+            await _companyService.Add(request);
             return Ok("Success");
+        }
+
+        [HttpGet("getby/{id}")]
+        public async Task<IActionResult>GetByAsync(int id)
+        {
+            var response= await _companyService.GetBy(id);
+            return Ok(response);
         }
     }
 }

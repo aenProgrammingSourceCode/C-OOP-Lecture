@@ -2,6 +2,7 @@
 {
     public interface IGenericeRepository<T> where T : class
     {
-        Task Add(T entity); 
+        Task Add(T entity);
+        Task<T> GetBy(int id);
     }
 }

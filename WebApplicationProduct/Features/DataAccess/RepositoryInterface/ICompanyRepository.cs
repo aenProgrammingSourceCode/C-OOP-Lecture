@@ -1,4 +1,6 @@
-﻿using nurAPI.Features.DomainModels;
+﻿
+
+using WebApplicationProduct.Features.DomainModels;
 
 namespace WebApplicationProduct.Features.DataAccess.RepositoryInterface
 {

@@ -1,8 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using nurAPI.Features.DomainModels;
+using WebApplicationProduct.Features.DomainModels;
 
-namespace nurAPI.Features.DataAccess.EntityConfigurations
+
+namespace WebApplicationProduct.Features.DataAccess.MicroServiceDbContext
 {
     public class CompanyConfiguration : IEntityTypeConfiguration<Company>
     {
